@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0,
+          maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Club residence</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/output.css">
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-3.5.0.js"></script>
+    <script>
+
+    $(function() {
+        var sldr = $('.sldr'),
+            sldrContent = sldr.html(),
+            slideWidth = $('.sl_ctr').outerWidth(),
+            slideCount = $('.sldr div.part').length,
+            prv_b = $('.prv_b'),
+            nxt_b = $('.nxt_b'),
+            sldrInterval = 5300,
+            animateTime = 1000,
+            course = 1,
+            margin = - slideWidth;
+        $('.sldr div.part:last').clone().prependTo('.sldr');
+        $('.sldr div.part').eq(1).clone().appendTo('.sldr');
+        $('.sldr').css('margin-left',-slideWidth);
+
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin,slideWidth,slideCount];
+
+        function nxt_bSlide(){interval=window.setInterval(animate,sldrInterval)}
+
+        function animate(){
+            if(margin==-slideCount*slideWidth-slideWidth){
+                sldr.css({'marginLeft':-slideWidth});
+                margin=-slideWidth*2}
+            else if(margin==0&&course==-1){
+                sldr.css({'marginLeft':-slideWidth*slideCount});
+                margin=-slideWidth*slideCount+slideWidth}
+            else{margin=margin-slideWidth*(course)}
+
+            sldr.animate({'marginLeft':margin},animateTime)}
+
+        function sldrStop(){window.clearInterval(interval)}
+
+        prv_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=-1;
+            animate();
+            course=course2});
+        nxt_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=1;
+            animate();
+            course=course2});
+
+        sldr.add(nxt_b).add(prv_b).hover( function(){sldrStop()}, nxt_bSlide );
+        nxt_bSlide()
+        });
+
+    </script>
+    <script>
+
+    $(function() {
+
+        var sldr = $('.sldr_m'),
+                sldr1 = $('.gw'),
+            sldrContent = sldr.html(),
+                sldrContent1 = sldr1.html(),
+            slideWidth = $('.sl_ctr_m').outerWidth().toFixed(),
+            slideWidth = (+slideWidth),
+                slideWidth0 = $('.gallery3').outerWidth().toFixed(),
+                slideWidth0 = (+slideWidth0),
+                slideWidth1 = $('.gallery3 div.gal_3#g31').outerWidth().toFixed(),     //margin-right=10
+                slideWidth1 = (+slideWidth1),
+                slideWidth2 = $('.gallery3 div.gal_3#g30').outerWidth().toFixed(),     //margin-right=10
+                slideWidth2 = (+slideWidth2),
+                    margin_r =$('.gallery3 div.gal_3').css('margin-right').slice(0,-2),
+                    margin_r = +margin_r,
+                slideWidth3=(+slideWidth2)+(+margin_r),
+                    height1 = $('.gallery3 div.gal_3#g30').css('height').slice(0,-2),
+                    height1 = +height1,
+                    height2 = $('.gallery3 div.gal_3#g31').css('height').slice(0,-2),
+                    height2 = +height2,
+                    top1 = $('.gallery3 div.gal_3#g30').css('top').slice(0,-2),
+                    top1 = +top1,
+                    top2 = $('.gallery3 div.gal_3#g31').css('top').slice(0,-2),
+                    top2 = +top2,
+            slideCount = $('.sl_ctr_m div.part_m').length,
+                slideCount1 = $('.gallery3 div.gal_3').length.toFixed(),
+                slideCount1 = +slideCount1 ,
+            prv_b = $('.prv_b_m'),
+            nxt_b = $('.nxt_b_m'),
+            animateTime = 1000,
+            course = 1,
+            margin = - slideWidth;
+                margin1 = -slideCount1*(+slideWidth3);
+                j=5;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin1,top1,top2,,slideWidth1,slideWidth2,slideWidth3,slideWidth0,course,slideCount1,-slideCount1*slideWidth1-slideWidth1,- slideCount1*(+slideWidth2+10),slideWidth,slideCount];
+
+        $('.sldr_m div.part_m:last').clone().prependTo('.sldr_m');        //speredu
+        $('.sldr_m div.part_m').eq(1).clone().appendTo('.sldr_m');        //szadi dobovlaet
+        $('.sldr_m').css('margin-left',-slideWidth);
+
+            $.each([4,4,4,4,4],function(index,value){
+                $('.gw div.gal_3').eq(value).clone().prependTo('.gw').css({'width':slideWidth2,'height':height1,'top':top1});
+                i=index*2+1;
+                $('.gw div.gal_3').eq(i).clone().appendTo('.gw').css({'width':slideWidth1,'height':height2,'top':top2});
+                });
+            $('.gw').css('margin-left', margin1);
+        function fix(){
+                $('.gw div.gal_3').eq(i).css({'width':slideWidth2,'height':height1,'top':top1});
+                $.each([6,7,8,9],function(index,value){
+                    $('.gw div.gal_3').eq(value).css({'width':slideWidth1,'height':height2,'top':top2});
+                });
+                $.each([10,11,12,13,14],function(index,value){
+                    $('.gw div.gal_3').eq(index).css({'width':slideWidth2,'height':height1,'top':top1});
+                    $('.gw div.gal_3').eq(value ).css({'width':slideWidth1,'height':height2,'top':top2});
+                });
+
+                //$(".round3 img").attr("srс","img/Ellipse.png");
+                //$("#r1 img").attr("srс","img/Ellipse1.png");
+                $(".round3 img").attr('src',"img/Ellipse.png");
+                $("#r1 img").attr("src",'img/Ellipse1.png');
+        }
+        function ani(){
+                        if(course == 1){
+                            j++;}
+                        else{j--;}
+
+                    margin1=margin1-slideWidth3*(course);
+                        if(course > 0){
+                            $('.gallery3 div.gal_3').eq(j).css({'width':slideWidth2,'height':height1,'top':top1});                            //$('.gallery3 div.gal_3').eq(i).css('height','103px');                            //$('.gallery3 div.gal_3').eq(i).css('top','0px');
+                            }
+                        else{
+                            $('.gallery3 div.gal_3').eq(j+1).css({'width':slideWidth1,'height':height2,'top':top2});                            //$('.gallery3 div.gal_3').eq(i).css('height','74px');                            //$('.gallery3 div.gal_3').eq(i).css('top','29px');
+                        }
+
+
+                    $(".round3 img").attr('src',"img/Ellipse.png");
+                    $(".round3#r"+(j%5+1)+" img").attr("src",'img/Ellipse1.png');
+        }
+        function animate(){
+            if(margin==-slideCount*slideWidth-slideWidth){
+                sldr.css({'marginLeft':-slideWidth});
+                margin=-slideWidth*2}
+            else if(margin==0&&course==-1){                                        // 4->0 0->4 = 1 == -1012345
+                sldr.css({'marginLeft':-slideWidth*slideCount});
+                margin=-slideWidth*slideCount+slideWidth}
+            else{margin=margin-slideWidth*(course)}
+            sldr.animate({'marginLeft':margin},animateTime)
+
+                if(margin1==-slideWidth3*10){      //-1770
+                    fix()
+                j=5;
+                    margin1=-slideCount1*(+slideWidth3);
+                    sldr1.css({'marginLeft':margin1});
+                    ani();
+                    }
+                else if(margin1==0&&course==-1){
+                    fix()
+                j=5;
+                    margin1=-slideCount1*(+slideWidth3);
+                    sldr1.css({'marginLeft':margin1});
+                    ani();
+                    }
+                else{
+                ani();
+                    }
+                sldr1.animate({'marginLeft':margin1},animateTime)
+            }
+
+
+        prv_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=-1;
+            animate();
+            course=course2;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin1,slideWidth1,slideWidth1,course,slideCount1,-slideCount1*slideWidth1-slideWidth1];
+            });
+        nxt_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=1;
+            animate();
+            course=course2;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin1,slideWidth1,slideWidth1,course,slideCount1,-slideCount1*slideWidth1-slideWidth1];
+            });
+
+
+        });
+
+    </script>
+    <script>
+    $(function() {
+        var sldr = $('.sldr_m41'),
+            sldrContent = sldr.html(),
+            slideWidth = $('.sl_ctr_m41').outerWidth().toFixed(),
+            slideWidth = (+slideWidth),
+            slideCount = $('.sl_ctr_m41 div.print4').length,
+            prv_b = $('.prv_b_m41'),
+            nxt_b = $('.nxt_b_m41'),
+            animateTime = 1000,
+            course = 1,
+                j=slideCount,
+            margin = - slideWidth;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin1,slideWidth1,slideWidth2,slideWidth3,slideWidth0,course,slideCount1,-slideCount1*slideWidth1-slideWidth1,- slideCount1*(+slideWidth2+10),slideWidth,slideCount];
+
+        $('.sldr_m41 div.print4:last').clone().prependTo('.sldr_m41');        //speredu
+        $('.sldr_m41 div.print4').eq(1).clone().appendTo('.sldr_m41');        //szadi dobovlaet
+        $('.sldr_m41').css('margin-left',-slideWidth);
+
+    function zamena(){
+        $('.text411 div').eq(1).html($('.tab41#t411 div').eq(1+j%slideCount).html());           //.slice(0,-1) + '&lt;span&gt;2&lt;/span&gt;'
+    }
+
+function fix(){
+                j=slideCount;
+                $(".round41 img").attr('src',"img/Ellipse.png");
+                $("#r411 img").attr("src",'img/Ellipse1.png');
+
+                $(".tab41 div.kom42").css({'color':'rgb(75, 75, 75)','opacity': '0.7'});
+                $("#kom41").css({'color':'rgb(21,22,24)','opacity': '1'});
+                }
+        function ani(){
+                        if(course == 1){
+                            j++;}
+                        else{j--;}
+                    $(".round41 img").attr('src',"img/Ellipse.png");
+                    $(".round41#r41"+(j%slideCount+1)+" img").attr("src",'img/Ellipse1.png');
+
+                    $(".tab41 div.kom42").css({'color':'rgb(75, 75, 75)','opacity': '0.7'});
+                    $("#kom4"+(j%slideCount+1)).css({'color':'rgb(21,22,24)','opacity': '1'});
+
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [j,slideCount,j%slideCount,j%slideCount+1,1+course+j%slideCount];
+            }
+
+
+        function animate(){
+            if(margin==-slideCount*slideWidth-slideWidth){
+                sldr.css({'marginLeft':-slideWidth});
+                margin=-slideWidth*2
+                fix();
+                ani();
+                }
+            else if(margin==0&&course==-1){
+                sldr.css({'marginLeft':-slideWidth*slideCount});
+                margin=-slideWidth*slideCount+slideWidth
+                fix();
+                ani();
+                }
+            else{
+                margin=margin-slideWidth*(course)
+                ani();
+                }
+            sldr.animate({'marginLeft':margin},animateTime)
+            }
+
+
+        prv_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=-1;
+            animate();
+            zamena();
+            course=course2;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin1,slideWidth1,slideWidth1,course,slideCount1,-slideCount1*slideWidth1-slideWidth1];
+            });
+        nxt_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=1;
+            animate();
+            zamena();
+            course=course2;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin1,slideWidth1,slideWidth1,course,slideCount1,-slideCount1*slideWidth1-slideWidth1];
+            });
+        });
+
+    </script>
+    <script>
+    $(function() {
+        var sldr = $('.sldr_m42'),
+            sldrContent = sldr.html(),
+            slideWidth = $('.sl_ctr_m42').outerWidth().toFixed(),
+            slideWidth = (+slideWidth+50),      //margin-right=50
+            slideCount = $('.sl_ctr_m42 div.doc42').length/3,
+            prv_b = $('.prv_b_m42'),
+            nxt_b = $('.nxt_b_m42'),
+            animateTime = 1000,
+            course = 1,
+                j=slideCount,
+            margin = - slideWidth;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin1,slideWidth1,slideWidth2,slideWidth3,slideWidth0,course,slideCount1,-slideCount1*slideWidth1-slideWidth1,- slideCount1*(+slideWidth2+10),slideWidth,slideCount];
+
+        //$('.sldr_m42 div.doc42:last').clone().prependTo('.sldr_m42');        //speredu
+        //$('.sldr_m42 div.doc42').eq(1).clone().appendTo('.sldr_m42');        //szadi dobovlaet
+        //$('.sldr_m42').css('margin-left',-slideWidth);
+
+        $.each([3,3,3],function(index,value){
+                $('.sldr_m42 div.doc42').eq(value).clone().prependTo('.sldr_m42');
+                i=index*2+1;
+                $('.sldr_m42 div.doc42').eq(i).clone().appendTo('.sldr_m42');
+                });
+            $('.sldr_m42').css('margin-left', margin);
+
+function fix(){
+                j=slideCount;
+                $(".round42 img").attr('src',"img/Ellipse.png");
+                $("#r421 img").attr("src",'img/Ellipse1.png');
+                }
+        function ani(){
+                        if(course == 1){
+                            j++;}
+                        else{j--;}
+                    $(".round42 img").attr('src',"img/Ellipse.png");
+                    $(".round42#r42"+(j%slideCount+1)+" img").attr("src",'img/Ellipse1.png');
+
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [j,slideCount,j%slideCount,j%slideCount+1,1+course+j%slideCount];
+            }
+
+
+        function animate(){
+            if(margin==-slideCount*slideWidth-slideWidth){
+                sldr.css({'marginLeft':-slideWidth});
+                margin=-slideWidth*2;
+                fix();
+                ani();
+                }
+            else if(margin==0&&course==-1){
+                sldr.css({'marginLeft':-slideWidth*slideCount});
+                margin=-slideWidth*slideCount+slideWidth;
+                fix();
+                ani();
+                }
+            else{
+                margin=margin-slideWidth*(course)
+                ani();
+                }
+            sldr.animate({'marginLeft':margin},animateTime)
+            }
+
+
+        prv_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=-1;
+            animate();
+            course=course2;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [course,slideWidth,slideCount,margin,-slideCount*slideWidth-slideWidth,-slideWidth*2];
+            });
+        nxt_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=1;
+            animate();
+            course=course2;
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [course,slideWidth,slideCount,margin,-slideCount*slideWidth-slideWidth,-slideWidth*2];
+            });
+        });
+
+    </script>
+        <script>
+    $(function() {
+
+        var sldr = $('.sldr_h'),
+            slideHeight = sldr.html(),
+            slideHeight = $('.sl_ctr_h').outerHeight(),     //751
+            slideCount = $('.sldr_h div.part_h').length,    //5
+
+            slCount = $('.sldr_hm div.part_hm').length,     //навигация слева
+            slCount_i = 0,
+
+            prv_b = $('.prv_b_h'),
+            nxt_b = $('.nxt_b_h'),
+            animateTime = 1000,
+            course = 1,
+            margin =0; // - slideHeight;                         //0 //-748
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [margin,slideHeight,slideHeight,slideCount];
+        $('.sldr_h').css('margin-top',-slideHeight*0);
+        function animate(){
+            if(margin==-slideCount*slideHeight+slideHeight&&course==1){
+                //sldr.css({'marginTop':-slideHeight});
+                //margin=-slideHeight*2
+                }
+            else if(margin==0&&course==-1){
+                //sldr.css({'marginTop':-slideHeight*slideCount});
+                //margin=-slideHeight*slideCount+slideHeight
+                }
+            else{
+                margin=margin-slideHeight*(course)}
+            sldr.animate({'marginTop':margin},animateTime)}
+        prv_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=-1;
+            animate();
+            course=course2;
+
+            if(slCount_i != 0){slCount_i--}                             //навигация слева
+            $(".part_hm").attr('style', 'display: none;');
+            $('.part_hm#'+slCount_i).attr('style', 'display: block;');
+
+//;var info = document.getElementById('delta');
+ //info.innerHTML = [margin,slideHeight,course,slideCount,-slideCount*slideHeight-slideHeight]
+ });
+        nxt_b.click(function(){
+            if(sldr.is(':animated')){
+                return false}
+            var course2=course;
+            course=1;
+            animate();
+            course=course2;
+
+            if(slCount_i != slCount-1){slCount_i++}                             //навигация слева
+            $(".part_hm").attr('style', 'display: none;');
+            $('.part_hm#'+slCount_i).attr('style', 'display: block;');
+
+ //var info = document.getElementById('delta');
+ //info.innerHTML = [slCount_i,slCount,margin,slideHeight,course,slideCount,-slideCount*slideHeight-slideHeight,margin-slideHeight*(course)]
+ });
+
+ //var info = document.getElementById('delta');
+ //info.innerHTML = margin ;
+        });
+
+    </script>
+    <script>
+
+//        $(function() {
+  //          var h = $(window).height(),     //625
+  //              w = $(window).width(),      //1366
+  //             k = 0,
+  //              k1=0,
+   //             m=0;
+   //         if (+h<750){k=h/750*100;k=+(k.toFixed())};
+   //         if (+w<1200){k1=w/750*100;k1=+(k1.toFixed())}
+   //         else {m=((w-1200))/k*100;};       //m=+(m.toFixed())
+
+   //         $("body").attr('style', 'zoom: '+k/100);   //+'; margin-left: '+m+'px;');
+                                        //        $('div.gr3').each(function(indx,elem){
+                                        //            var asd = $(elem).css('left').slice(0,-2),
+                                        //            asd=+asd,
+                                        //            d=+asd+m,
+                                        //            f=d+'px';
+                                        //            $(elem).css('style', 'left: f;');
+                                        // var info1 = document.getElementById('delta1');
+                                        // info1.innerHTML = [k,k1,w,h,m,asd,m+asd,d,f];
+                                        //        });
+   //         });
+
+        function fun_close() {
+            $(".page6").attr('style', 'display: none;');
+        }
+        function fun_open() {
+            $(".page6").attr('style', 'display: block;');
+        }
+
+    </script>
+    <!--<script>
+        $(function() {    var delta = 3;    var info = document.getElementById('delta');    info.innerHTML = +info.innerHTML + delta;});
+    </script>-->
+</head>
+<body>
+<header>
+
+</header>
+        <div class="sl_ctr_h" id="container">
+            <div class="sldr_h">
+                <div class="part_h">
+                    <div class="part1">
+                        <div class="sl_ctr">
+                            <div class="sldr">
+                                <div class="part">
+                                    <div class="text2">Жилой комплекс КЛАБ РЕЗИДЕНС</div>
+                                    <div class="text1">Квартиры уже в продаже!</div>
+                                    <div class="club"> <img src="img/Club_residence 1.png"></div>
+                                    <img src="img/1.png">
+                                </div>
+                                <div class="part">
+                                    <div class="text2">Жилой комплекс КЛАБ РЕЗИДЕНС</div>
+                                    <div class="text1">Это две строчки текста на семь слов</div>
+                                    <div class="logoclub"> <img src="img/лого клаб.png"></div>
+                                    <img src="img/header-bg 2.png">
+                                </div>
+                            </div>
+                            <div class="header1"><img src="img/хедер.png"  onclick="fun_open()"></div>
+                            <button class="b1" onclick="fun_open()"><div class="inb1">О КОМПЛЕКСЕ</div></button>
+                            <div class="slider1"><img src="img/слайдер.png"></div>
+                            <!--<div class="slider1"><img src="img/слайдер (1).png"></div>-->
+                            <div class="navig1"><img src="img/навигация.png"></div>
+                            <!--<div class="navig1"><img src="img/навигация (1).png"></div>-->
+                            <div class="metro1"><img src="img/метро.png"></div>
+                            <div class="adres1"><img src="img/адрес.png"></div>
+                            <div class="cl1"><img src="img/comfort-life 2.png"></div>
+                            <div class="prv_b"></div>
+                            <div class="nxt_b"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="part_h">
+                            <div class="el3"><img src="img/йолка.png"></div>
+                            <!--<div class="gr3"><img src="img/Group 216.png"></div>
+                            <div class="gr31"><img src="img/Group 162.png"></div>-->
+                            <div class="sl_ctr_m">
+                                <div class="sldr_m">
+                                    <div class="part_m">
+                                        <div class="rect3"><img src="img/Rectangle 11.png"></div>
+                                    </div>
+                                    <div class="part_m">
+                                        <div class="rect3"><img width="100%" height="100%" src="img/Rectangle 12.png"></div>
+                                    </div>
+                                    <div class="part_m">
+                                        <div class="rect3"><img src="img/Rectangle 11.png"></div>
+                                    </div>
+                                    <div class="part_m">
+                                        <div class="rect3"><img src="img/Rectangle 11.png"></div>
+                                    </div>
+                                    <div class="part_m">
+                                        <div class="rect3"><img width="100%" height="100%" src="img/Rectangle 12.png"></div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="prv_b_m"></div>
+                                <div class="nxt_b_m"></div>
+                            <div class="ch3">
+                                <div class="b31"><div class="text_b31">Клубный дом</div></div>
+                                <div class="b32"><div class="text_b32">Клаб резиденс</div></div>
+                                <div class="arrow_r3"><img src="img/Vector 24.png"></div>
+                                <div class="arrow_l3"><img src="img/Vector 28.png"></div>
+                                <div class="round3" id="r1"><img src="img/Ellipse1.png"></div>
+                                <div class="round3" id="r2"><img src="img/Ellipse.png"></div>
+                                <div class="round3" id="r3"><img src="img/Ellipse.png"></div>
+                                <div class="round3" id="r4"><img src="img/Ellipse.png"></div>
+                                <div class="round3" id="r5"><img src="img/Ellipse.png"></div>
+                            </div>
+                            <div class="gallery3">
+                                <div class="gw">
+                                    <div class="gal_3" id="g30"><img src="img/Rectangle 11.png"></div>
+                                    <div class="gal_3" id="g31"><img src="img/Rectangle 12.png"></div>
+                                    <div class="gal_3" id="g32"><img src="img/Rectangle 11.png"></div>
+                                    <div class="gal_3" id="g33"><img src="img/Rectangle 11.png"></div>
+                                    <div class="gal_3" id="g34"><img src="img/Rectangle 12.png"></div>
+                                </div>
+                            </div>
+                </div>
+                <div class="part_h" width="1550px">
+                    <div class="page4">
+            <div class="bgwood4"><img src="img/бг лес.png"></div>
+            <div class="text4">Планировки</div>
+            <div class="block4">
+                <div class="sl_ctr_m41">
+                    <div class="sldr_m41">
+                            <div class="print4" id="pr40"><img src="img/KV-96-3AS2_2_2_1.png"></div>
+                            <div class="print4" id="pr41"><img src="img/KV-96-3AS2_2_2_1.png"></div>
+                            <div class="print4" id="pr42"><img src="img/KV-96-3AS2_2_2_1.png"></div>
+                            <div class="print4" id="pr43"><img src="img/KV-96-3AS2_2_2_1.png"></div>
+                            <div class="print4" id="pr44"><img src="img/KV-96-3AS2_2_2_1.png"></div>
+                            <div class="print4" id="pr45"><img src="img/KV-96-3AS2_2_2_1.png"></div>
+                    </div>
+                </div>
+                                <div class="prv_b_m41"></div>
+                                <div class="nxt_b_m41"></div>
+                <div class="tab4">
+                    <div class="tab41" id="t411">
+                        <div  class="kom41">1кiмнатнi</div>
+                        <div class="kom42" id="kom41"style="text-transform: lowercase;top: 3px;">36.05м<sup>2</sup></div>
+                        <div class="kom42" id="kom42"style="text-transform: lowercase;top: 3px;">37.05м<sup>2</sup></div>
+                        <div class="kom42" id="kom43"style="text-transform: lowercase;top: 3px;">40.05м<sup>2</sup></div>
+                        <div class="kom42" id="kom44"style="text-transform: lowercase;top: 3px;">41.05м<sup>2</sup></div>
+                        <div class="kom42" id="kom45"style="text-transform: lowercase;top: 3px;">43.05м<sup>2</sup></div>
+                        <div class="kom42" id="kom46"style="text-transform: lowercase;top: 3px;">44.05м<sup>2</sup></div>
+                    </div>
+                    <div class="tab41" id="t412"><div>2кiмнатнi</div></div>
+                    <div class="tab41" id="t413"><div>3кiмнатнi</div></div>
+                    <div class="tab41" id="t414"><div>з терасами</div></div>
+
+                </div>
+                <div class="room4">
+                    <div class="text411" id="t1">
+                        <div>Квартира </div>
+                        <div style="text-indent:10px; text-transform: lowercase; top: -10px;"> 36.05м<sup>2</sup></div>
+                    </div>
+                    <div class="bl4121">
+                    <div class="text412" id="t2">
+                        <div class="t411">
+                            <div>Будинок </div>
+                            <div>Поверх</div>
+                            <div>Житлова площа</div>
+                            <div>Загальна площа</div>
+                        </div>
+                        <div class="t412">
+                            <div>15 </div>
+                            <div>4</div>
+                            <div style="text-transform: lowercase;top: -6px;">36.05 м<sup>2</sup></div>
+                            <div style="text-transform: lowercase;top: -11px;">36.05 м<sup>2</sup></div>
+                        </div>
+                        <div class="t421">
+                            <div>Спальня</div>
+                            <div>Кухня</div>
+                            <div>Передпокий</div>
+                            <div>Санвузол</div>
+                        </div>
+                        <div class="t422">
+                            <div style="text-transform: lowercase;top: -7px;">14.56 м<sup>2</sup></div>
+                            <div style="text-transform: lowercase;top: -12px;">17.34 м<sup>2</sup></div>
+                            <div style="text-transform: lowercase;top: -17px;">14.56 м<sup>2</sup></div>
+                            <div style="text-transform: lowercase;top: -21px;">17.34 м<sup>2</sup></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="slider4">
+                    <div class="ch41">
+                        <div class="arrow_r41"><img src="img/Vector 24.png"></div>
+                        <div class="arrow_l41"><img src="img/Vector 28.png"></div>
+                        <div class="round41" id="r411"><img src="img/Ellipse1.png"></div>
+                        <div class="round41" id="r412"><img src="img/Ellipse.png"></div>
+                        <div class="round41" id="r413"><img src="img/Ellipse.png"></div>
+                        <div class="round41" id="r414"><img src="img/Ellipse.png"></div>
+                        <div class="round41" id="r415"><img src="img/Ellipse.png"></div>
+                        <div class="round41" id="r416"><img src="img/Ellipse.png"></div>
+                    </div>
+                </div>
+                <div class="cont4"><img src="img/контакты.png"></div>
+                <div class="call4" onclick="fun_open()"><img src="img/закзать звонок.png"></div>
+            </div>
+                        <div class="block42">
+                            <div class="text42">
+                                <div class="text421">Документы</div>
+                                <div class="text422">У нас есть все документы на строительство, ознакомиться с ними вы можете в этом разделе.</div>
+                                <div class="text423">Или польехать в отдел продаж: Киевская обл. пгт. Гостомель, ул. Варшавская и переулок Варшавский</div>
+
+                            </div>
+                            <!--<div class="navig42"><img src="img/navigation (1).png"></div>-->
+
+                <div class="sl_ctr_m42">
+                    <div class="sldr_m42">
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div>
+                            </div>
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div></div>
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div></div>
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div></div>
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div></div>
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div></div>
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div></div>
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div></div>
+                            <div class="doc42">
+                                <div class="ramka"></div>
+                                <div class="pdf"><img src="img/pdf.png"></div>
+                                <div class="line42"></div>
+                                <div class="darrow"><img src="img/loadarrow.png"></div>
+                                <div class="text2421">18 Mb</div>
+                                <div class="text2422">Разрешение на строительство</div>
+                                <div class="text2423">21.05.2019</div></div>
+                    </div>
+                </div>
+                                <div class="prv_b_m42"></div>
+                                <div class="nxt_b_m42"></div>
+                            <div class="navig43">
+                                <div class="ch42">
+                                    <div class="arrow_r42"><img src="img/Vector 24.png"></div>
+                                    <div class="arrow_l42"><img src="img/Vector 28.png"></div>
+                                    <div class="round42" id="r421"><img src="img/Ellipse1.png"></div>
+                                    <div class="round42" id="r422"><img src="img/Ellipse.png"></div>
+                                    <div class="round42" id="r423"><img src="img/Ellipse.png"></div>
+                                </div>
+                            </div>
+
+                        </div>
+        </div>
+                </div>
+                <div class="part_h"></div>
+                <div class="part_h">
+                   <div class="page5">
+                        <div class="footer5">
+                            <img width="100%" src="img/futBG.png">
+                            <div class="logoCH"><img src="img/logoCH.png"></div>
+                            <div class="address">
+                                <a href="https://snazzymaps.com/style/12903/antiqued-gold" target="_blank">
+                                    <img src="img/adress.png">
+                                </a>
+                                <div class="text521">Киев, переулок Радистов, 14 A</div>
+                            </div>
+                            <div class="phone">
+                                <img src="img/telephone.png" onclick="fun_open()" style="cursor:pointer;">
+                                <div class="text522">Отдел продаж: (044) 555 56 25</div>
+                            </div>
+                            <div class="social">
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img src="img/social.png">
+                                </a>
+                            </div>
+                            <div class="ruua">
+                                <img src="img/Line 24.png">
+                                <div class="text5231">UA</div>
+                                <div class="text5232">RU</div>
+                            </div>
+                            <div class="logosmart"><img src="img/logosmart.png"></div>
+
+                        </div>
+                        <div class="office5">
+                            <div class="text511">Офис продаж</div>
+                            <div class="text512" onclick="fun_open()" style="cursor:pointer;">
+                                <img src="img/написать нам.png">
+                                <div class="text5121">Написать нам</div>
+                            </div>
+                            <div class="text513">
+                                <div class="text5131">Адрес</div>
+                                <div class="text5132">Киев, переулок Радистов, 16</div>
+                            </div>
+                            <div class="text514">
+                                <a href="https://snazzymaps.com/style/12903/antiqued-gold" target="_blank">
+                                    <img src="img/навигатор.png">
+                                    <div class="text5141">Открыть в навигаторе</div>
+                                </a>
+                            </div>
+                            <div class="text515">
+                                <div class="text5151">Телефон</div>
+                                <div class="text5152">(044) 555 57 75</div>
+                                <div class="text5153">ПН-ПТ: 9:00 - 18:00</div>
+                            </div>
+                            <div class="text516" onclick="fun_open()" style="cursor:pointer;">
+                                <img src="img/заказать звонок.png">
+                                <div class="text5161">Заказать звонок</div>
+                            </div>
+                            <div class="map">
+                                <img src="img/map.png">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        <div class="page6">
+            <div class="forma62"><img src="img/forma2.png"></div>
+            <div class="forma61"><img src="img/forma1.png"></div>
+            <div class="forma63"><img src="img/formaName.png"></div>
+            <div class="forma64"><img src="img/formaPhone.png"></div>
+            <div class="forma65"><img src="img/formaClose.png"  onclick="fun_close()"></div>
+            <div class="text6">Заказать звонок</div>
+            <button class="b6" onclick="fun_close()"><div class="inb6">отправить</div></button>
+        </div>
+        </div>
+                            <div class="gr30"><img src="img/navigation (2).png"></div>
+                            <div class="sl_ctr_hm">
+                                <div class="sldr_hm">
+                                    <div class="part_hm" id="0"></div>
+                                    <div class="part_hm" id="1">
+                                        <div class="gr3"><div class="gr31"><img src="img/Group1.png" style="max-width: none;"></div></div>
+                                        <div class="gallery">галерея</div>
+                                    </div>
+                                    <div class="part_hm" id="2">
+                                        <div class="gr3">
+                                            <div class="gr32"><img src="img/Group2.png"></div>
+                                        </div>
+                                        <div class="plan4">Планировки</div>
+                                    </div>
+                                    <div class="part_hm" id="3">
+                                        <div class="gr3">
+                                            <div class="gr33">
+                                                <img src="img/Group3.png">
+                                            </div>
+                                        </div>
+                                        <div class="doc4">Документы</div>
+                                    </div>
+                                    <div class="part_hm" id="4">
+                                        <div class="gr3"><div class="gr34"><img src="img/Group4.png"></div></div>
+                                        <div class="cont5">Контакты</div>
+                                    </div>
+                                </div>
+                            </div>
+                <div class="prv_b_h"></div>
+                <div class="nxt_b_h"></div>
+
+<!--<span id="delta" top="20" right="20">1</span>
+<span id="delta1" top="40" right="20">0</span>-->
+<script>
+$( window ).resize(function() {location.reload();});
+
+
+$( 'body' ).attr('style','overflow: hidden;height:'+$( window ).height()+'px');
+
+    //$( '.part_h' ).attr('style','height:'+$( window ).height()+'px');
+    //$( '.part' ).attr('style','width:'+$( window ).width()+'px;height:'+$( window ).height()+'px');
+    //$( '.part_m' ).attr('style','width:'+$( '.sl_ctr_m' ).width()+'px;height:'+$( '.sl_ctr_m' ).height()+'px');
+
+//$('.gw div.gal_3').css({'width':'136px','margin-right': '10px'}); //$('#g30').width()
+//$('.gw div.gal_3#g30').css({'width':'189px','margin-right': '10px'}); //$('#g30').width()
+
+    var elem = document.getElementById('container');
+    if (elem.addEventListener) {
+      if ('onwheel' in document) {
+        // IE9+, FF17+
+        elem.addEventListener("wheel", onWheel);
+      } else if ('onmousewheel' in document) {
+        // устаревший вариант события
+        elem.addEventListener("mousewheel", onWheel);
+      } else {
+        // Firefox < 17
+        elem.addEventListener("MozMousePixelScroll", onWheel);
+      }
+    } else { // IE8-
+      elem.attachEvent("onmousewheel", onWheel);
+    }
+
+
+    // Это решение предусматривает поддержку IE8-
+    function onWheel(e) {
+      e = e || window.event;
+
+      // deltaY, detail содержат пиксели
+      // wheelDelta не дает возможность узнать количество пикселей
+      // onwheel || MozMousePixelScroll || onmousewheel
+      var delta = e.deltaY || e.detail || e.wheelDelta;
+
+      var info = document.getElementById('delta'),k=0;
+        if(k>delta){
+        $('.prv_b_h')[0].click();
+        }
+        else if(k<delta){
+        $('.nxt_b_h')[0].click();
+
+        };
+
+      info.innerHTML = +info.innerHTML + delta;
+
+      e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+    }
+</script>
+</body>
+</html>

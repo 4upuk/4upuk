@@ -1,0 +1,1822 @@
+@charset "UTF-8";
+body {
+  zoom: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+body img {
+  max-width: 100%;
+}
+
+.inb6, .text5161, .text5153, .text5151, .text5141, .text5131, .text5121, .cont5, .text5232, .text5231, .text522, .text521, .text2423, .text2421, .text423, .text422, .t412 div, .t422 div, .t411 div, .t421 div, .doc4, .plan4, .gallery, .inb1, .text2 {
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.tab41 div, .text_b32, .text_b31 {
+  font-family: HelveticaNeueCyr;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.text6, .text5152, .text5132, .text511, .text2422, .text421, .text411 div, .text4, .text1 {
+  font-family: Cormorant;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/*fonts*/
+/* cormorant-regular - cyrillic */
+@font-face {
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cormorant Regular"), local("Cormorant-Regular"), url("../fonts/cormorant-v8-cyrillic-regular.woff2") format("woff2"), url("../fonts/cormorant-v8-cyrillic-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* cormorant-regular - cyrillic */
+@font-face {
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Cormorant Regular"), local("Cormorant-Regular"), url("../fonts/cormorant-v8-cyrillic-500.woff2") format("woff2"), url("../fonts/cormorant-v8-cyrillic-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/*HelveticaNeueCyr*/
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("HelveticaNeueCyr-Bold.eot");
+  src: local("HelveticaNeueCyr-Bold"), url("HelveticaNeueCyr-Bold.eot?#iefix") format("embedded-opentype"), url("HelveticaNeueCyr-Bold.woff") format("woff"), url("HelveticaNeueCyr-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+/*HelveticaNeueCyr*/
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("HelveticaNeueCyr-Roman.eot");
+  src: local("HelveticaNeueCyr-Roman"), url("../fonts/HelveticaNeueCyr-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*endfonts*/
+/* slider height*/
+.sl_ctr_h {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sldr_h {
+  position: relative;
+  width: 100%;
+  height: 1333.3333333333%;
+}
+
+.sldr_h div.part_h {
+  position: relative;
+  width: 100%;
+  height: 7.5%;
+  left: 0px;
+  top: 0px;
+}
+
+.prv_b_h, .nxt_b_h {
+  position: absolute;
+  z-index: 4;
+  left: 4.3%;
+  display: block;
+  width: 1.1666666667%;
+  height: 2.6666666667%;
+  cursor: pointer;
+}
+
+.prv_b_h:hover, .nxt_b_h:hover {
+  opacity: 0.6;
+}
+
+.prv_b_h {
+  top: 67.4666666667%;
+}
+
+.nxt_b_h {
+  top: 74.8%;
+}
+
+/* slider width*/
+.part1 {
+  width: 100%;
+  height: 100%;
+}
+
+.sl_ctr {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sldr {
+  position: relative;
+  width: 8333.3333333333%;
+  height: 100%;
+}
+
+.sldr div.part {
+  position: relative;
+  height: 100%;
+  width: 1.2%;
+  float: left;
+}
+
+.part img {
+  width: 100%;
+  height: 100%;
+}
+
+.prv_b, .nxt_b {
+  position: absolute;
+  top: 82.6666666667%;
+  display: block;
+  width: 4.1666666667%;
+  height: 1.3333333333%;
+  cursor: pointer;
+}
+
+.prv_b:hover, .nxt_b:hover {
+  opacity: 0.6;
+}
+
+.prv_b {
+  left: 15%;
+}
+
+.nxt_b {
+  left: 20%;
+}
+
+/* slider width p2*/
+.sl_ctr_m {
+  position: relative;
+  left: 19.5833333333%;
+  width: 80.4166666667%;
+  height: 92.1333333333%;
+  overflow: hidden;
+}
+
+.gallery3 {
+  position: absolute;
+  left: 45%;
+  bottom: 0px;
+  width: 56.8333333333%;
+  height: 13.7333333333%;
+  overflow: hidden;
+}
+
+.sldr_m {
+  position: relative;
+  width: 1036.2694300518%;
+  height: 100%;
+  /*691px*$fheight/750px;*/
+}
+
+.gw {
+  position: relative;
+  width: 1851.8518518519%;
+  height: 100%;
+}
+
+.sldr_m div.part_m {
+  position: relative;
+  width: 9.65%;
+  height: 100%;
+  float: left;
+}
+
+.part_m img {
+  width: 100%;
+  height: 100%;
+}
+
+.gw div.gal_3 {
+  position: relative;
+  width: 1.19%;
+  height: 71.8446601942%;
+  top: 28.1553398058%;
+  float: left;
+  margin-right: 0.1%;
+}
+
+.prv_b_m, .nxt_b_m {
+  position: absolute;
+  bottom: 3.6%;
+  display: block;
+  width: 4.1666666667%;
+  height: 1.3333333333%;
+  cursor: pointer;
+}
+
+.prv_b_m:hover, .nxt_b_m:hover {
+  opacity: 0.6;
+}
+
+.prv_b_m {
+  z-index: 2;
+  left: 28.1666666667%;
+}
+
+.nxt_b_m {
+  z-index: 2;
+  left: 34.4166666667%;
+}
+
+/* slider width p41*/
+.sl_ctr_m41 {
+  position: relative;
+  top: 16.2570888469%;
+  left: 6.1016949153%;
+  width: 30.2734463277%;
+  height: 73.0302457467%;
+  overflow: hidden;
+}
+
+.sldr_m41 {
+  position: relative;
+  width: 37324.5744998507%;
+  height: 100%;
+}
+
+.sldr_m41 div.print4 {
+  width: 0.26792%;
+  height: 100%;
+  float: left;
+}
+
+#pr41 img {
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+#pr42 img {
+  transform: matrix(-1, 0, 0, -1, 0, 0);
+}
+
+#pr43 img {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+#pr44 img {
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+#pr45 img {
+  transform: matrix(-1, 0, 0, -1, 0, 0);
+}
+
+.prv_b_m41, .nxt_b_m41 {
+  position: absolute;
+  top: 91.6824196597%;
+  display: block;
+  width: 5.6497175141%;
+  height: 1.8903591682%;
+  cursor: pointer;
+}
+
+.prv_b_m41:hover, .nxt_b_m41:hover {
+  opacity: 0.6;
+}
+
+.prv_b_m41 {
+  z-index: 2;
+  left: 71.7514124294%;
+}
+
+.nxt_b_m41 {
+  z-index: 2;
+  left: 80.2259887006%;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+small {
+  font-size: smaller;
+}
+
+.block42 {
+  width: 100%;
+  height: 20%;
+}
+
+/* slider width p42*/
+.sl_ctr_m42 {
+  position: relative;
+  z-index: 2;
+  top: 340%;
+  left: 19.5833333333%;
+  width: 55.5833333333%;
+  height: 86.6666666667%;
+  overflow: hidden;
+}
+
+.sldr_m42 {
+  position: relative;
+  width: 1499.2503748126%;
+  height: 100%;
+}
+
+.prv_b_m42, .nxt_b_m42 {
+  position: absolute;
+  top: 182%;
+  display: block;
+  width: 4.1666666667%;
+  height: 1.3333333333%;
+  cursor: pointer;
+}
+
+.prv_b_m42:hover, .nxt_b_m42:hover {
+  opacity: 0.6;
+}
+
+.prv_b_m42 {
+  z-index: 2;
+  left: 30%;
+}
+
+.nxt_b_m42 {
+  z-index: 2;
+  left: 35.8333333333%;
+}
+
+/*  block1 begin*/
+.text2 {
+  /* Жилой комплекс КЛАБ РЕЗИДЕНС */
+  position: absolute;
+  width: 19.5%;
+  height: 3.2%;
+  left: 9.1666666667%;
+  top: 31.6%;
+  /* наборной */
+  font-size: 1.0248901903vw;
+  line-height: 1.756954612vw;
+  /*????????????*/
+  /* identical to box height, or 171% */
+  /* йелоу */
+  color: #A68E52;
+}
+
+.text1 {
+  /* Квартиры уже в продаже! */
+  position: absolute;
+  width: 47.5833333333%;
+  height: 18.1333333333%;
+  left: 9.1666666667%;
+  top: 35.8666666667%;
+  /* H1 */
+  font-size: 4.9780380673vw;
+  line-height: 4.9780380673vw;
+  /* or 100% */
+  /* вайт */
+  color: #FDFBFB;
+}
+
+.b1 {
+  /* Rectangle 3 */
+  padding: 0;
+  margin: 0;
+  border: 0;
+  position: absolute;
+  width: 15.1666666667%;
+  height: 5.0666666667%;
+  left: 9.1666666667%;
+  top: 61.7333333333%;
+  /* йелоу */
+  background: #A68E52;
+  border-radius: 3px;
+}
+
+.inb1 {
+  /* О КОМПЛЕКСЕ */
+  position: inherit;
+  width: 43.4065934066%;
+  height: 68.4210526316%;
+  left: 28.021978022%;
+  top: 18.4210526316%;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  text-align: center;
+  letter-spacing: 0.05em;
+  /*text-transform: uppercase; переносится текст=(*/
+  /* вайт */
+  color: #FDFBFB;
+}
+
+.club {
+  /* Vector */
+  position: absolute;
+  width: 4.9166666667%;
+  height: 9.2%;
+  left: 3.75%;
+  top: 2.9333333333%;
+}
+
+.logoclub img {
+  position: fixed;
+  width: 5.75%;
+  height: 12.772%;
+}
+
+/*.club img{width:59px*$fwidth/1200px;}*/
+.club img {
+  position: fixed;
+  width: 5.75%;
+  height: 12.772%;
+}
+
+.slider1 {
+  /* слайдер */
+  position: absolute;
+  width: 2.0833333333%;
+  height: 16.6666666667%;
+  left: 3.4166666667%;
+  top: 31.8666666667%;
+}
+
+.header1 {
+  /* хедер */
+  position: absolute;
+  width: 19.4166666667%;
+  height: 5.7333333333%;
+  left: 18.75%;
+  top: 3.7333333333%;
+  cursor: pointer;
+}
+
+.navig1 {
+  /* навигация */
+  position: absolute;
+  width: 17.0291666667%;
+  height: 1.0666666667%;
+  left: 9.1666666667%;
+  top: 82.2666666667%;
+}
+
+.metro1 {
+  /* метро */
+  position: absolute;
+  width: 5.75%;
+  height: 3.4666666667%;
+  left: 33.5%;
+  top: 93.4666666667%;
+}
+
+.adres1 {
+  /* адрес */
+  position: absolute;
+  width: 17.1133333333%;
+  height: 3.4666666667%;
+  left: 9.1666666667%;
+  top: 93.4666666667%;
+}
+
+.cl1 {
+  /* comfort-life 2 */
+  position: absolute;
+  width: 5.5%;
+  height: 6.108%;
+  left: 90.75%;
+  top: 91.2253333333%;
+}
+
+.logoclub {
+  /* лого клаб */
+  position: absolute;
+  width: 5.75%;
+  height: 12.772%;
+  left: 3.75%;
+  top: 0.0186666667%;
+}
+
+/*.logoclub img{width: 69px*$fwidth/1200px;height: 95.79px*$fheight/750px;}*/
+/* block1 end*/
+/* block2 start*/
+.rect3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.el3 {
+  /* jolochka_27-320 1 */
+  position: absolute;
+  width: 29.9166666667%;
+  height: 36.835%;
+  left: 1%;
+  top: 30.8%;
+}
+
+.gr30 {
+  /* Group 216 */
+  position: absolute;
+  z-index: 1;
+  width: 8.1666666667%;
+  height: 58.8466666667%;
+  left: 3.75%;
+  top: 9.3333333333%;
+}
+
+.gr30 img {
+  max-width: none;
+}
+
+.gr3 {
+  /* Group 216 */
+  position: absolute;
+  z-index: 1;
+  width: 2.5%;
+  height: 40.8%;
+  left: 3.75%;
+  top: 10%;
+}
+
+.gr3 img {
+  max-width: none;
+}
+
+.gr31 {
+  /* Group 162 */
+  position: absolute;
+  width: 22.7666666667%;
+  height: 19.7222222222%;
+  left: 0;
+  top: -1.9607843137%;
+}
+
+.gr32 {
+  /* Group 216 */
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.gr33 {
+  /* Group 216 */
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 20.9150326797%;
+}
+
+.gr34 {
+  /* Group 216 */
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: -5.8823529412%;
+}
+
+.gallery {
+  /* ГАЛЕРЕЯ */
+  position: absolute;
+  width: 3.9166666667%;
+  height: 3.4666666667%;
+  left: 7.0833333333%;
+  top: 20%;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* текст */
+  color: #757575;
+}
+
+.ch3 {
+  /* клубный дом */
+  position: absolute;
+  width: 43.3333333333%;
+  height: 13.7333333333%;
+  left: 0px;
+  bottom: 0px;
+  box-shadow: 9px 17px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ch3 img {
+  vertical-align: top;
+}
+
+.b31 {
+  /* Rectangle 3197 */
+  position: absolute;
+  width: 61.1538461538%;
+  height: 42.7184466019%;
+  left: 0%;
+  top: 0px;
+  background: #FDFBFB;
+  /*background: #F1F1F1 ;*/
+}
+
+.text_b31 {
+  /* КЛУБНЫЙ ДОМ */
+  position: absolute;
+  width: 100%;
+  height: 59.0909090909%;
+  left: 49.3710691824%;
+  top: 20.4545454545%;
+  bottom: 20.4545454545%;
+  right: 23.8993710692%;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* йелоу */
+  color: #A68E52;
+  /* блэк
+  color: #212224;*/
+}
+
+.b32 {
+  /* Rectangle 3196 */
+  position: absolute;
+  width: 38.8461538462%;
+  height: 42.7184466019%;
+  left: 61.1538461538%;
+  top: 0px;
+  background: #F1F1F1;
+  /*background: #FDFBFB;*/
+}
+
+.text_b32 {
+  /* КЛАБ РЕЗИДЕНС */
+  position: absolute;
+  width: 100%;
+  height: 59.0909090909%;
+  left: 17.9245283019%;
+  top: 20.4545454545%;
+  bottom: 20.4545454545%;
+  right: 17.9245283019%;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* йелоу
+  color: #A68E52;*/
+  /* блэк*/
+  color: #212224;
+}
+
+.arrow_r3 {
+  /* Vector 24 */
+  position: absolute;
+  width: 9.6826923077%;
+  height: 6.6310679612%;
+  left: 79.4230769231%;
+  bottom: 26.213592233%;
+  /* текст */
+  /*
+  background: #757575;
+  текст
+  border: 0.683211px solid #757575;*/
+}
+
+.arrow_l3 {
+  /* Vector 24 */
+  position: absolute;
+  width: 9.6826923077%;
+  height: 6.6310679612%;
+  left: 65%;
+  bottom: 26.213592233%;
+  /* текст */
+  /*
+  background: #757575;
+  текст
+  border: 0.683211px solid #757575;*/
+}
+
+.round3 {
+  /* Ellipse 27 */
+  position: absolute;
+  width: 1.5384615385%;
+  height: 7.7669902913%;
+  /*top: 68px*$fheight/520px;*/
+  bottom: 26.213592233%;
+}
+
+.round3#r1 {
+  /* Ellipse 27 */
+  left: 30.1923076923%;
+  right: 344.6601941748%;
+}
+
+.round3#r2 {
+  /* Ellipse 27 */
+  left: 36.7307692308%;
+  right: 311.6504854369%;
+}
+
+.round3#r3 {
+  /* Ellipse 27 */
+  left: 43.2692307692%;
+  right: 278.640776699%;
+}
+
+.round3#r4 {
+  /* Ellipse 27 */
+  left: 49.8076923077%;
+  right: 245.6310679612%;
+}
+
+.round3#r5 {
+  /* Ellipse 27 */
+  left: 56.3461538462%;
+  right: 212.6213592233%;
+}
+
+.gal_3 img {
+  width: 100%;
+  height: 100%;
+}
+
+#g30 {
+  /* Rectangle 3189 */
+  width: 1.66%;
+  height: 139.1891891892%;
+  top: 0;
+  float: left;
+  margin-right: 0.1%;
+}
+
+/* block2 end*/
+.page4 {
+  height: 200%;
+  /*1550px*/
+}
+
+.plan4 {
+  /* планировки */
+  position: absolute;
+  width: 6.25%;
+  height: 3.4666666667%;
+  left: 7.0833333333%;
+  top: 31%;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* йелоу */
+  color: #A68E52;
+}
+
+.doc4 {
+  /* документы */
+  position: absolute;
+  width: 5.75%;
+  height: 3.4666666667%;
+  left: 7.0833333333%;
+  top: 43%;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* йелоу */
+  color: #A68E52;
+}
+
+/* block3 */
+.bgwood4 {
+  /* бг лес */
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  /*1550px;*/
+  left: 0px;
+  top: 0px;
+}
+
+.bgwood4 img {
+  width: 100%;
+  height: 100%;
+}
+
+.text4 {
+  /* Планировки */
+  position: absolute;
+  width: 28.9166666667%;
+  height: 9.0666666667%;
+  left: 17.0833333333%;
+  top: 5.0666666667%;
+  /* H1 */
+  font-size: 4.9780380673vw;
+  line-height: 4.9780380673vw;
+  /* identical to box height, or 100% */
+  display: flex;
+  align-items: center;
+  /* блэк */
+  color: #212224;
+}
+
+.block4 {
+  /* Rectangle 3193 */
+  position: absolute;
+  width: 73.75%;
+  height: 70.5333333333%;
+  left: 17.0833333333%;
+  top: 19.7333333333%;
+  background: #FFFFFF;
+  box-shadow: 0px 8px 20px rgba(33, 34, 36, 0.1);
+}
+
+.tab4 {
+  /* табы */
+  position: absolute;
+  width: 100%;
+  height: 8.3175803403%;
+  left: 0%;
+  top: 0px;
+}
+
+.tab41 {
+  /* табы */
+  position: relative;
+  width: 10%;
+  height: 100%;
+  float: left;
+  left: 0px;
+  top: 0px;
+  background: #F1F1F1;
+}
+
+#t411 {
+  width: 70%;
+  background: #FFFFFF;
+}
+
+#t411 div.kom41 {
+  /* йелоу */
+  color: #A68E52;
+}
+
+#t411 div#kom41 {
+  /* блэк */
+  color: #212224;
+  opacity: 1;
+}
+
+.tab41 div {
+  /* з терасами */
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 14%;
+  height: auto;
+  left: 0.8333333333%;
+  top: 20.4545454545%;
+  float: left;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* текст */
+  color: #757575;
+  opacity: 0.7;
+}
+
+.text411 div {
+  /* Квартира 36.05м2*/
+  position: relative;
+  float: left;
+  /* н2 */
+  font-size: 2.196193265vw;
+  /*&&&&&?????*/
+  line-height: 4.9780380673vw;
+  /* identical to box height, or 227% */
+  display: table;
+  align-items: center;
+  /* блэк */
+  color: #212224;
+}
+
+.bl4121 {
+  position: absolute;
+  top: 33.1707317073%;
+  left: 7.0422535211%;
+  height: 50.7317073171%;
+  width: 109.1549295775%;
+  float: none;
+}
+
+.t411, .t421 {
+  /* Будинок Поверх Житлова площа Загальна площа */
+  position: relative;
+  float: left;
+  margin-right: 6.4516129032%;
+  width: 19.7849462366%;
+  height: 100%;
+  left: 0%;
+  top: 0px;
+}
+
+.t411 div, .t421 div {
+  font-size: 0.878477306vw;
+  line-height: 1.9033674963vw;
+  /* or 217% */
+  display: flex;
+  align-items: center;
+  /* текст */
+  color: #757575;
+}
+
+.t412, .t422 {
+  /* 15 4 36.05м2 36.05м2 */
+  position: relative;
+  float: left;
+  margin-right: 4.0860215054%;
+  width: 18.2795698925%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.t412 div, .t422 div {
+  position: relative;
+  font-size: 0.878477306vw;
+  line-height: 1.9033674963vw;
+  /* or 217% */
+  display: table;
+  align-items: center;
+  /* блэк */
+  color: #212224;
+}
+
+.slider4 {
+  /* навигация */
+  position: absolute;
+  width: 39.5875706215%;
+  height: 1.5122873346%;
+  left: 46.3276836158%;
+  top: 90.5482041588%;
+}
+
+.ch41 {
+  /* клубный дом */
+  position: absolute;
+  width: 148.4230055659%;
+  height: 1287.5%;
+  left: 0%;
+  bottom: -62.5%;
+}
+
+.ch41 img {
+  vertical-align: top;
+}
+
+.arrow_r41 {
+  /* Vector 24 */
+  position: absolute;
+  width: 9.6826923077%;
+  height: 6.6310679612%;
+  left: 57.6923076923%;
+  bottom: 0px;
+  /* текст */
+  /*
+  background: #757575;
+  текст
+  border: 0.683211px solid #757575;*/
+}
+
+.arrow_l41 {
+  /* Vector 24 */
+  position: absolute;
+  width: 9.6826923077%;
+  height: 6.6310679612%;
+  left: 43.0769230769%;
+  bottom: 0px;
+  /* текст */
+  /*
+  background: #757575;
+  текст
+  border: 0.683211px solid #757575;*/
+}
+
+.round41 {
+  /* Ellipse 27 */
+  position: absolute;
+  width: 1.5384615385%;
+  height: 7.7669902913%;
+  bottom: 0px;
+}
+
+.round41#r411 {
+  /* Ellipse 27 */
+  left: 0px;
+  right: 68.2692307692%;
+}
+
+.round41#r412 {
+  /* Ellipse 27 */
+  left: 6.5384615385%;
+  right: 61.7307692308%;
+}
+
+.round41#r413 {
+  /* Ellipse 27 */
+  left: 13.0769230769%;
+  right: 55.1923076923%;
+}
+
+.round41#r414 {
+  /* Ellipse 27 */
+  left: 19.6153846154%;
+  right: 48.6538461538%;
+}
+
+.round41#r415 {
+  /* Ellipse 27 */
+  left: 26.1538461538%;
+  right: 42.1153846154%;
+}
+
+.round41#r416 {
+  /* Ellipse 27 */
+  left: 32.6923076923%;
+  right: 42.1153846154%;
+}
+
+.room4 {
+  /* квартира 36.05 м */
+  position: absolute;
+  width: 48.1355932203%;
+  height: 38.752362949%;
+  left: 46.3276836158%;
+  top: 16.2570888469%;
+  box-shadow: 0px 5px 11px 0px #c1c1c1;
+  padding-left: 3.3898305085%;
+}
+
+.cont4 {
+  /* контакты */
+  position: absolute;
+  width: 37.8531073446%;
+  height: 9.8298676749%;
+  left: 46.3276836158%;
+  top: 60.6805293006%;
+}
+
+.call4 {
+  /* закзать звонок */
+  position: absolute;
+  width: 12.4293785311%;
+  height: 4.9149338374%;
+  left: 46.3276836158%;
+  top: 73.5349716446%;
+  cursor: pointer;
+}
+
+/*4 stranica*/
+.text42 {
+  /* текст */
+  position: absolute;
+  z-index: 2;
+  width: 60.8333333333%;
+  height: 18.1333333333%;
+  left: 19.5833333333%;
+  top: 109.3333333333%;
+}
+
+.text421 {
+  /* Документы */
+  position: absolute;
+  width: 43.4246575342%;
+  height: 50%;
+  left: 0px;
+  top: 0px;
+  /* H1 */
+  font-size: 4.9780380673vw;
+  line-height: 4.9780380673vw;
+  /* identical to box height, or 100% */
+  display: flex;
+  align-items: center;
+  /* вайт */
+  color: #FDFBFB;
+}
+
+.text422 {
+  /* У нас есть все документы на строительство, ознакомиться с ними вы можете в этом разделе. */
+  position: absolute;
+  width: 47.9452054795%;
+  height: 35.2941176471%;
+  left: 0%;
+  top: 64.7058823529%;
+  /* наборной */
+  font-size: 1.0248901903vw;
+  line-height: 1.756954612vw;
+  /* or 171% */
+  display: flex;
+  align-items: center;
+  /* грей */
+  color: #DDDDDD;
+}
+
+.text423 {
+  /* Или подъехать в отделе продаж: Киевская обл. пгт. Гостомель, ул. Варшавская и переулок Варшавский */
+  position: absolute;
+  width: 47.9452054795%;
+  height: 35.2941176471%;
+  left: 52.0547945205%;
+  top: 64.7058823529%;
+  /* наборной */
+  font-size: 1.0248901903vw;
+  line-height: 1.756954612vw;
+  /* or 171% */
+  display: flex;
+  align-items: flex-end;
+  /* грей */
+  color: #DDDDDD;
+}
+
+.navig42 {
+  /* navigation */
+  position: absolute;
+  width: 9.0833333333%;
+  height: 58.8466666667%;
+  left: 3.75%;
+  top: 117.7333333333%;
+}
+
+.doc42 {
+  /* документ */
+  position: inherit;
+  float: left;
+  width: 1.89%;
+  height: 100%;
+  left: 0%;
+  top: 0px;
+  margin-right: 0.5%;
+}
+
+.ramka {
+  /* Rectangle 3189 */
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  /* текст */
+  border: 0.5px solid #757575;
+  box-sizing: border-box;
+}
+
+.pdf {
+  /* Group 252 */
+  position: absolute;
+  left: 11.11%;
+  right: 64.02%;
+  top: 13.08%;
+  bottom: 66.92%;
+}
+
+.line42 {
+  /* Line 3 */
+  position: absolute;
+  left: 11.11%;
+  right: 11.64%;
+  top: 73.08%;
+  bottom: 26.92%;
+  /* текст */
+  border: 0.5px solid #757575;
+}
+
+.darrow {
+  /* Group 253 */
+  position: absolute;
+  left: 83.6%;
+  right: 11.4%;
+  top: 84.62%;
+  bottom: 10.38%;
+}
+
+.text2421 {
+  /* 18 Mb */
+  position: absolute;
+  left: 58.73%;
+  right: 22.75%;
+  top: 19.62%;
+  bottom: 70.38%;
+  font-size: 0.878477306vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 217% */
+  display: flex;
+  align-items: flex-end;
+  /* текст */
+  color: #757575;
+}
+
+.text2422 {
+  /* Разрешение на строительство */
+  position: absolute;
+  left: 11.11%;
+  right: 29.1%;
+  top: 44.62%;
+  bottom: 35.38%;
+  font-size: 1.317715959vw;
+  line-height: 1.9033674963vw;
+  /* or 144% */
+  display: flex;
+  align-items: center;
+  /* грей */
+  color: #DDDDDD;
+}
+
+.text2423 {
+  /* 21.05.2019 */
+  position: absolute;
+  width: 32.2751322751%;
+  height: 10%;
+  left: 11.1111111111%;
+  top: 82.3076923077%;
+  font-size: 0.878477306vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 217% */
+  display: flex;
+  align-items: center;
+  /* текст */
+  color: #757575;
+}
+
+.navig43 {
+  /* навигация */
+  position: absolute;
+  width: 20.6958333333%;
+  height: 1.0666666667%;
+  left: 19.5833333333%;
+  top: 181.4666666667%;
+}
+
+.ch42 {
+  /* клубный дом */
+  position: absolute;
+  width: 209.3819206765%;
+  height: 1287.5%;
+  left: 0%;
+  bottom: -62.5%;
+}
+
+.ch42 img {
+  vertical-align: top;
+}
+
+.arrow_r42 {
+  /* Vector 24 */
+  position: absolute;
+  width: 9.6826923077%;
+  height: 6.6310679612%;
+  left: 37.5%;
+  bottom: 0px;
+  /* текст */
+  /*
+  background: #757575;
+  текст
+  border: 0.683211px solid #757575;*/
+}
+
+.arrow_l42 {
+  /* Vector 24 */
+  position: absolute;
+  width: 9.6826923077%;
+  height: 6.6310679612%;
+  left: 24.0384615385%;
+  bottom: 0px;
+  /* текст */
+  /*
+  background: #757575;
+  текст
+  border: 0.683211px solid #757575;*/
+}
+
+.round42 {
+  /* Ellipse 27 */
+  position: absolute;
+  width: 1.5384615385%;
+  height: 7.7669902913%;
+  bottom: 0px;
+}
+
+.round42#r421 {
+  /* Ellipse 27 */
+  left: 0%;
+  right: 344.6601941748%;
+}
+
+.round42#r422 {
+  /* Ellipse 27 */
+  left: 6.5384615385%;
+  right: 61.7307692308%;
+}
+
+.round42#r423 {
+  /* Ellipse 27 */
+  left: 13.0769230769%;
+  right: 55.1923076923%;
+}
+
+/* block3 end*/
+/* block4 */
+.page5 {
+  width: 100%;
+  height: 100%;
+  /*853px*/
+  left: 0px;
+  top: 0px;
+}
+
+.footer5 {
+  /* футтер */
+  position: absolute;
+  width: 100%;
+  height: 11.7333333333%;
+  left: 0%;
+  bottom: 0px;
+}
+
+.footer5 img {
+  vertical-align: text-bottom;
+}
+
+.logoCH {
+  /* лого клаб */
+  position: inherit;
+  width: 7.9166666667%;
+  height: 134.9431818182%;
+  left: 3.75%;
+  top: -17.0454545455%;
+}
+
+.address {
+  /* адрес */
+  position: inherit;
+  width: 19.25%;
+  height: 29.5454545455%;
+  left: 18.25%;
+  top: 35.2272727273%;
+}
+
+.text521 {
+  /* Киев, переулок Радистов, 14 A */
+  position: absolute;
+  width: 87.8787878788%;
+  height: 100%;
+  left: 8.658008658%;
+  top: 0px;
+  font-size: 1.0248901903vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 186% */
+  color: #B3AEAE;
+}
+
+.phone {
+  /* телефон */
+  position: inherit;
+  width: 18.9166666667%;
+  height: 29.5454545455%;
+  left: 44.0833333333%;
+  top: 35.2272727273%;
+}
+
+.text522 {
+  /* Отдел продаж: (044) 555 56 25 */
+  position: absolute;
+  width: 87.6651982379%;
+  height: 100%;
+  left: 8.8105726872%;
+  top: 0px;
+  font-size: 1.0248901903vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 186% */
+  color: #B3AEAE;
+}
+
+.social {
+  /* социаки */
+  position: inherit;
+  width: 4.0833333333%;
+  height: 18.1818181818%;
+  left: 69.4166666667%;
+  top: 42.0454545455%;
+}
+
+.ruua {
+  /* Group 277 */
+  position: inherit;
+  width: 3.75%;
+  height: 29.5454545455%;
+  left: 80.0833333333%;
+  top: 35.2272727273%;
+}
+
+.ruua img {
+  position: inherit;
+  top: 76.9230769231%;
+}
+
+.text5231 {
+  /* UA */
+  position: absolute;
+  width: 33.3333333333%;
+  height: 100%;
+  left: 0%;
+  top: 0px;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  /* текст */
+  color: #757575;
+}
+
+.text5232 {
+  /* RU */
+  position: absolute;
+  width: 33.3333333333%;
+  height: 100%;
+  left: 44.4444444444%;
+  top: 0px;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  /* текст */
+  color: #757575;
+}
+
+.logosmart {
+  /* лого смарт */
+  position: inherit;
+  left: 90.42%;
+  right: 3.75%;
+  top: 34.0909090909%;
+}
+
+.cont5 {
+  /* контакты */
+  position: absolute;
+  width: 4.8333333333%;
+  height: 3.4666666667%;
+  left: 7.0833333333%;
+  top: 54%;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* текст */
+  color: #757575;
+}
+
+.office5 {
+  /* Офис продаж */
+  position: absolute;
+  width: 96.25%;
+  height: 83.7333333333%;
+  left: 3.75%;
+  bottom: 11.7333333333%;
+}
+
+.text511 {
+  /* Офис продаж */
+  position: inherit;
+  width: 18.1818181818%;
+  height: 21.6560509554%;
+  left: 8.2251082251%;
+  top: 0px;
+  /* H1 */
+  font-size: 4.9780380673vw;
+  line-height: 4.9780380673vw;
+  /* or 100% */
+  display: flex;
+  align-items: center;
+  /* блэк */
+  color: #212224;
+}
+
+.text512 {
+  /* написать нам */
+  position: inherit;
+  width: 11.7748917749%;
+  height: 4.2993630573%;
+  left: 8.2251082251%;
+  top: 30.7324840764%;
+}
+
+.text5121 {
+  /* Написать нам */
+  position: inherit;
+  width: 66.9117647059%;
+  height: 88.8888888889%;
+  left: 33.0882352941%;
+  top: 0px;
+  /* наборной */
+  font-size: 1.0248901903vw;
+  line-height: 1.756954612vw;
+  /* identical to box height, or 171% */
+  display: flex;
+  align-items: center;
+  /* йелоу */
+  color: #A68E52;
+}
+
+.text513 {
+  /* адрес */
+  position: inherit;
+  width: 29.5238095238%;
+  height: 12.101910828%;
+  left: 32.9004329004%;
+  top: 3.821656051%;
+}
+
+.text5131 {
+  /* Адрес */
+  position: inherit;
+  width: 12.0234604106%;
+  height: 31.5789473684%;
+  left: 0%;
+  top: 0px;
+  /* наборной */
+  font-size: 1.0248901903vw;
+  line-height: 1.756954612vw;
+  /* identical to box height, or 171% */
+  /* текст */
+  color: #757575;
+}
+
+.text5132 {
+  /* Киев, переулок Радистов, 16 */
+  position: inherit;
+  width: 100%;
+  height: 89.4736842105%;
+  left: 0%;
+  bottom: 0px;
+  /* н2 */
+  font-size: 2.196193265vw;
+  line-height: 4.9780380673vw;
+  /* identical to box height, or 227% */
+  /* блэк */
+  color: #212224;
+}
+
+.text514 {
+  /* навигатор */
+  position: inherit;
+  width: 12.6406926407%;
+  height: 4.1401273885%;
+  left: 32.9004329004%;
+  top: 17.5159235669%;
+}
+
+.text5141 {
+  /* Открыть в навигаторе */
+  position: absolute;
+  width: 100%;
+  height: 92.3076923077%;
+  left: 0%;
+  top: 0px;
+  /* наборной */
+  font-size: 1.0248901903vw;
+  line-height: 1.756954612vw;
+  /* identical to box height, or 171% */
+  display: flex;
+  align-items: center;
+  /* йелоу */
+  color: #A68E52;
+}
+
+.text515 {
+  /* телефон */
+  position: inherit;
+  width: 26.8398268398%;
+  height: 12.101910828%;
+  left: 65.8008658009%;
+  top: 3.821656051%;
+}
+
+.text5151 {
+  /* Телефон */
+  position: inherit;
+  width: 18.3870967742%;
+  height: 31.5789473684%;
+  left: 0%;
+  top: 0px;
+  /* наборной */
+  font-size: 1.0248901903vw;
+  line-height: 1.756954612vw;
+  /* identical to box height, or 171% */
+  /* текст */
+  color: #757575;
+}
+
+.text5152 {
+  /* (044) 555 57 75 */
+  position: inherit;
+  width: 61.2903225806%;
+  height: 89.4736842105%;
+  left: 0%;
+  bottom: 0px;
+  /* н2 */
+  font-size: 2.196193265vw;
+  line-height: 4.9780380673vw;
+  /* identical to box height, or 227% */
+  /* блэк */
+  color: #212224;
+}
+
+.text5153 {
+  /* ПН-ПТ: 9:00 - 18:00 */
+  position: inherit;
+  width: 32.9032258065%;
+  height: 34.2105263158%;
+  left: 67.0967741935%;
+  top: 46.0526315789%;
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* текст */
+  color: #757575;
+}
+
+.text516 {
+  /* заказать звонок */
+  position: inherit;
+  width: 9.5238095238%;
+  height: 4.1401273885%;
+  left: 65.8008658009%;
+  top: 17.5159235669%;
+}
+
+.text5161 {
+  /* Заказать звонок */
+  position: inherit;
+  width: 100%;
+  height: 92.3076923077%;
+  left: 0%;
+  top: 0px;
+  /* наборной */
+  font-size: 1.0248901903vw;
+  line-height: 1.756954612vw;
+  /* identical to box height, or 171% */
+  display: flex;
+  align-items: center;
+  /* йелоу */
+  color: #A68E52;
+}
+
+.map {
+  /* https://snazzymaps.com/style/12903/antiqued-gold */
+  position: inherit;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.map img {
+  width: 100%;
+  height: 100%;
+}
+
+/* block4 end*/
+/* block5 end*/
+.page6 {
+  position: fixed;
+  z-index: 3;
+  display: none;
+  width: 63.9166666667%;
+  height: 67.4666666667%;
+  left: 10%;
+  top: 10%;
+  background: #E5E5E5;
+}
+
+.forma61 {
+  /* изображение_viber_2020-03-20_21-44-43 2 */
+  position: absolute;
+  width: 49.8044328553%;
+  height: 100%;
+  left: 50.1955671447%;
+  top: 0px;
+}
+
+.forma61 img {
+  width: 100%;
+  height: 100%;
+}
+
+.forma62 {
+  /* Rectangle 3193 */
+  position: absolute;
+  width: 94.7848761408%;
+  height: 92.0948616601%;
+  left: 2.6075619296%;
+  top: 3.95256917%;
+  /**/
+  opacity: 0.5;
+  /* йелоу */
+  border: 1px solid #A68E52;
+  box-sizing: border-box;
+}
+
+.forma63 {
+  /* имя */
+  position: absolute;
+  width: 34.5501955671%;
+  height: 7.1146245059%;
+  left: 8.7353324641%;
+  top: 47.0355731225%;
+}
+
+.forma64 {
+  /* телефон */
+  position: absolute;
+  width: 34.5501955671%;
+  height: 7.7075098814%;
+  left: 8.7353324641%;
+  top: 60.2766798419%;
+}
+
+.forma65 {
+  /* закрыть */
+  position: absolute;
+  width: 5.4758800522%;
+  height: 8.3003952569%;
+  left: 89.7001303781%;
+  top: 7.1146245059%;
+}
+
+.text6 {
+  /* Заказать звонок */
+  position: absolute;
+  width: 32.4641460235%;
+  height: 26.8774703557%;
+  left: 8.7353324641%;
+  top: 14.0316205534%;
+  /* H1 */
+  font-size: 4.9780380673vw;
+  line-height: 4.9780380673vw;
+  /* or 100% */
+  /* блэк */
+  color: #212224;
+}
+
+.b6 {
+  /* батон */
+  position: absolute;
+  width: 23.7288135593%;
+  height: 7.5098814229%;
+  left: 8.7353324641%;
+  top: 78.0632411067%;
+  /* йелоу */
+  background: #A68E52;
+  border-radius: 3px;
+}
+
+.inb6 {
+  /* ОТПРАВИТЬ */
+  position: absolute;
+  width: 34.6153846154%;
+  height: 68.4210526316%;
+  left: 50%;
+  top: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  /**/
+  font-size: 0.7320644217vw;
+  line-height: 1.9033674963vw;
+  /* identical to box height, or 260% */
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* вайт */
+  color: #FDFBFB;
+}
+
+/* block5 end*/
+
+/*# sourceMappingURL=output.css.map */
